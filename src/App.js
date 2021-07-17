@@ -8,7 +8,7 @@ import {
   IoIosCard,
   IoIosSettings,
 } from "react-icons/io";
-import { GrTransaction } from "react-icons/gr"
+import { GrTransaction } from "react-icons/gr";
 
 function App() {
   return (
@@ -36,7 +36,11 @@ function App() {
             <IoLogoBitcoin />
           </div>
           <div className="mt-auto mb-4">
-            <img className="rounded-full"src="http://placecorgi.com/60/60" alt='profile' />
+            <img
+              className="rounded-full"
+              src="http://placecorgi.com/60/60"
+              alt="profile"
+            />
           </div>
         </IconContext.Provider>
       </div>
