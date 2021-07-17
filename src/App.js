@@ -1,19 +1,130 @@
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
-import { IconContext } from "react-icons";
-import {
-  IoIosArrowUp,
-  IoLogoBitcoin,
-  IoIosHome,
-  IoIosCard,
-  IoIosSettings,
-} from "react-icons/io";
-import { GrTransaction } from "react-icons/gr";
+// import { IconContext } from "react-icons";
+// import {
+//   IoIosArrowUp,
+//   IoLogoBitcoin,
+//   IoIosHome,
+//   IoIosCard,
+//   IoIosSettings,
+// } from "react-icons/io";
+// import { GrTransaction } from "react-icons/gr";
 
 function App() {
   return (
     <div>
-      <h1>test</h1>
+      <div className="font-Montserrat p-10">
+        <h1 className="text-5xl font-bold">$254,107.22</h1>
+        <h2 className="text-sm font-light text-gray-400">
+          Total available balance
+        </h2>
+        <div className="flex mt-5 mb-3 text-2xl font-semibold">
+          <h1 className="mr-3">Accounts</h1>
+          <span>+</span>
+        </div>
+        <div className="px-3 flex justify-items-stretch overflow-auto">
+          <div className="account bg-pink-400 rounded-lg p-5 mr-4 ">
+            <h2 className="text-xl text-white font-medium">Savings</h2>
+            <h2 className="text-2xl text-white font-bold">112,564.20</h2>
+          </div>
+          <div className="account bg-pink-400 rounded-lg p-5 mr-4 ">
+            <h2 className="text-xl text-white font-medium">Savings</h2>
+            <h2 className="text-2xl text-white font-bold">112,564.20</h2>
+          </div>
+          <div className="account bg-pink-400 rounded-lg p-5 mr-4">
+            <h2 className="text-xl text-white font-medium">Savings</h2>
+            <h2 className="text-2xl text-white font-bold">112,564.20</h2>
+          </div>
+        </div>
+        <h1 className="mr-3 mt-5 mb-3 text-2xl font-semibold">
+          Recent Transactions
+        </h1>
+        <div>
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b-2">
+            <div className="flex items-center">
+              <img
+                className="rounded-full h-7 w-7 mr-2 "
+                src="http://placecorgi.com/260/180"
+                alt="logo"
+              />
+              <h2>Starbucks Coffe</h2>
+            </div>
+            <h3 className="ml-auto text-green-500">6.99$</h3>
+          </div>
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b-2">
+            <div className="flex items-center">
+              <img
+                className="rounded-full h-7 w-7 mr-2 "
+                src="http://placecorgi.com/260/180"
+                alt="logo"
+              />
+              <h2>asdss Coffe</h2>
+            </div>
+            <h3 className="ml-auto text-red-500">6.99$</h3>
+          </div>
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b-2">
+            <div className="flex items-center">
+              <img
+                className="rounded-full h-7 w-7 mr-2 "
+                src="http://placecorgi.com/260/180"
+                alt="logo"
+              />
+              <h2>Starbucks Coffe</h2>
+            </div>
+            <h3 className="ml-auto text-green-500">6.99$</h3>
+          </div>
+        </div>
+        <div className="flex mt-5  text-2xl font-semibold">
+          <h1 className="mr-3">Your Cashflow</h1>
+          <span>^</span>
+        </div>
+        <h2 className="text-sm font-light text-gray-400 mb-4">
+          In the last month
+        </h2>
+        <div className="space-y-4 ml-3">
+          <div>
+            <h4 className="my-1 font-regular text-sm">Income</h4>
+            <ProgressBar
+              baseBgColor="#fff"
+              bgColor="#A0DEA4"
+              completed={60}
+              height="16px"
+              labelSize="10px"
+            />
+          </div>
+          <div>
+            <h4 className="my-1 font-regular text-sm">Expenses</h4>
+            <ProgressBar
+              baseBgColor="#fff"
+              bgColor="#ED969D"
+              completed={40}
+              height="16px"
+              labelSize="10px"
+            />
+          </div>
+          <div>
+            <h4 className="my-1 font-regular text-sm">Expenses</h4>
+            <ProgressBar
+              baseBgColor="#fff"
+              bgColor="#8CB8E2"
+              completed={50}
+              height="16px"
+              labelSize="10px"
+            />
+          </div>
+          <div className="flex">
+            <h2 className="font-bold mr-1">$254,107.22</h2>
+            <h3 className="text-gray-400 font-light">above</h3>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-50 h-16 w-full fixed bottom-0 flex justify-around items-center">
+        <div className="bg-gray-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
+        <div className="bg-gray-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
+        <div className="bg-pink-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
+        <div className="bg-gray-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
+        <div className="bg-gray-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
+      </div>
     </div>
   );
 }
