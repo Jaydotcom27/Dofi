@@ -1,6 +1,9 @@
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
-// import { IconContext } from "react-icons";
+import { IconContext } from "react-icons";
+import { BiListPlus, BiUpArrowAlt } from "react-icons/bi";
+import { IconName } from "react-icons/bs";
+
 // import {
 //   IoIosArrowUp,
 //   IoLogoBitcoin,
@@ -13,70 +16,139 @@ import ProgressBar from "@ramonak/react-progress-bar";
 function App() {
   return (
     <div>
-      <div className="font-Montserrat p-10">
+      <div className="font-Montserrat p-10 h-11/12">
         <h1 className="text-5xl font-bold">$254,107.22</h1>
         <h2 className="text-sm font-light text-gray-400">
           Total available balance
         </h2>
-        <div className="flex mt-5 mb-3 text-2xl font-semibold">
+        <div className="flex mt-5 mb-3 text-2xl font-semibold items-center">
           <h1 className="mr-3">Accounts</h1>
-          <span>+</span>
+          <span>
+            <IconContext.Provider value={{ color: "#F87373" }}>
+              <BiListPlus />
+            </IconContext.Provider>
+          </span>
         </div>
-        <div className="px-3 flex justify-items-stretch overflow-auto">
-          <div className="account bg-pink-400 rounded-lg p-5 mr-4 ">
+        <div className="px-3 flex justify-items-stretch h-auto overflow-x-auto">
+          <div className="account bg-red-400 hover:bg-red-300  rounded-lg p-5 mr-4 transition duration-500 ease-in-out cursor-pointer">
             <h2 className="text-xl text-white font-medium">Savings</h2>
             <h2 className="text-2xl text-white font-bold">112,564.20</h2>
           </div>
-          <div className="account bg-pink-400 rounded-lg p-5 mr-4 ">
-            <h2 className="text-xl text-white font-medium">Savings</h2>
+          <div className="account bg-blue-400 hover:bg-blue-300  rounded-lg p-5 mr-4 transition duration-500 ease-in-out cursor-pointer">
+            <h2 className="text-xl text-white font-medium">Investing</h2>
             <h2 className="text-2xl text-white font-bold">112,564.20</h2>
           </div>
-          <div className="account bg-pink-400 rounded-lg p-5 mr-4">
-            <h2 className="text-xl text-white font-medium">Savings</h2>
+          <div className="account bg-green-400 hover:bg-green-300  rounded-lg p-5 mr-4 transition duration-500 ease-in-out cursor-pointer">
+            <h2 className="text-xl text-white font-medium">BHD</h2>
             <h2 className="text-2xl text-white font-bold">112,564.20</h2>
           </div>
         </div>
         <h1 className="mr-3 mt-5 mb-3 text-2xl font-semibold">
           Recent Transactions
         </h1>
-        <div>
-          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b-2">
+        <div className=" max-h-64 overflow-auto">
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b">
             <div className="flex items-center">
               <img
                 className="rounded-full h-7 w-7 mr-2 "
                 src="http://placecorgi.com/260/180"
                 alt="logo"
               />
-              <h2>Starbucks Coffe</h2>
+              <div>
+                <h2 className="text-sm font-medium">Starbucks Coffe</h2>
+                <h2 className="text-xs text-gray-400 font-light">
+                  Food And Beverages
+                </h2>
+              </div>
             </div>
             <h3 className="ml-auto text-green-500">6.99$</h3>
           </div>
-          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b-2">
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b">
             <div className="flex items-center">
               <img
                 className="rounded-full h-7 w-7 mr-2 "
                 src="http://placecorgi.com/260/180"
                 alt="logo"
               />
-              <h2>asdss Coffe</h2>
+              <div>
+                <h2 className="text-sm font-medium">Starbucks Coffe</h2>
+                <h2 className="text-xs text-gray-400 font-light">
+                  Food And Beverages
+                </h2>
+              </div>
             </div>
-            <h3 className="ml-auto text-red-500">6.99$</h3>
+            <h3 className="ml-auto text-green-500">6.99$</h3>
           </div>
-          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b-2">
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b">
             <div className="flex items-center">
               <img
                 className="rounded-full h-7 w-7 mr-2 "
                 src="http://placecorgi.com/260/180"
                 alt="logo"
               />
-              <h2>Starbucks Coffe</h2>
+              <div>
+                <h2 className="text-sm font-medium">Starbucks Coffe</h2>
+                <h2 className="text-xs text-gray-400 font-light">
+                  Food And Beverages
+                </h2>
+              </div>
+            </div>
+            <h3 className="ml-auto text-green-500">6.99$</h3>
+          </div>{" "}
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b">
+            <div className="flex items-center">
+              <img
+                className="rounded-full h-7 w-7 mr-2 "
+                src="http://placecorgi.com/260/180"
+                alt="logo"
+              />
+              <div>
+                <h2 className="text-sm font-medium">Starbucks Coffe</h2>
+                <h2 className="text-xs text-gray-400 font-light">
+                  Food And Beverages
+                </h2>
+              </div>
+            </div>
+            <h3 className="ml-auto text-green-500">6.99$</h3>
+          </div>{" "}
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b">
+            <div className="flex items-center">
+              <img
+                className="rounded-full h-7 w-7 mr-2 "
+                src="http://placecorgi.com/260/180"
+                alt="logo"
+              />
+              <div>
+                <h2 className="text-sm font-medium">Starbucks Coffe</h2>
+                <h2 className="text-xs text-gray-400 font-light">
+                  Food And Beverages
+                </h2>
+              </div>
+            </div>
+            <h3 className="ml-auto text-green-500">6.99$</h3>
+          </div>
+          <div className="transaction flex w-full justify-start items-center mb-2 pb-3 border-b">
+            <div className="flex items-center">
+              <img
+                className="rounded-full h-7 w-7 mr-2 "
+                src="http://placecorgi.com/260/180"
+                alt="logo"
+              />
+              <div>
+                <h2 className="text-sm font-medium">Starbucks Coffe</h2>
+                <h2 className="text-xs text-gray-400 font-light">
+                  Food And Beverages
+                </h2>
+              </div>
             </div>
             <h3 className="ml-auto text-green-500">6.99$</h3>
           </div>
         </div>
-        <div className="flex mt-5  text-2xl font-semibold">
+        <div className="flex mt-5 text-2xl font-semibold items-center">
           <h1 className="mr-3">Your Cashflow</h1>
-          <span>^</span>
+          <IconContext.Provider value={{ color: "#A0DEA4" }}>
+            <BiUpArrowAlt />
+          </IconContext.Provider>{" "}
         </div>
         <h2 className="text-sm font-light text-gray-400 mb-4">
           In the last month
@@ -85,7 +157,7 @@ function App() {
           <div>
             <h4 className="my-1 font-regular text-sm">Income</h4>
             <ProgressBar
-              baseBgColor="#fff"
+              baseBgColor="#f3f3f3"
               bgColor="#A0DEA4"
               completed={60}
               height="16px"
@@ -95,7 +167,7 @@ function App() {
           <div>
             <h4 className="my-1 font-regular text-sm">Expenses</h4>
             <ProgressBar
-              baseBgColor="#fff"
+              baseBgColor="#f3f3f3"
               bgColor="#ED969D"
               completed={40}
               height="16px"
@@ -103,22 +175,22 @@ function App() {
             />
           </div>
           <div>
-            <h4 className="my-1 font-regular text-sm">Expenses</h4>
+            <h4 className="my-1 font-regular text-sm">Outcome</h4>
             <ProgressBar
-              baseBgColor="#fff"
+              baseBgColor="#f3f3f3"
               bgColor="#8CB8E2"
               completed={50}
               height="16px"
               labelSize="10px"
             />
           </div>
-          <div className="flex">
-            <h2 className="font-bold mr-1">$254,107.22</h2>
+          <div className="flex mb-5">
+            <h2 className="font-bold mr-1 mb-14">$254,107.22</h2>
             <h3 className="text-gray-400 font-light">above</h3>
           </div>
         </div>
       </div>
-      <div className="bg-gray-50 h-16 w-full fixed bottom-0 flex justify-around items-center">
+      <div className="bg-gray-50 h-16 w-full fixed bottom-0 flex justify-around items-center h-1/12">
         <div className="bg-gray-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
         <div className="bg-gray-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
         <div className="bg-pink-200 h-3 w-3 rounded-md p-5 flex items-center "></div>
